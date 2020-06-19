@@ -20,7 +20,6 @@ public:
 
     vector<int>& sortSquaredVector(vector<int>& sq_vect) {
       sort(sq_vect.begin(), sq_vect.end());
-      // reverse(sq_vect.begin(), sq_vect.end());
       return sq_vect;
     }
 };
