@@ -24,11 +24,11 @@ public:
       map<int, int> m;
       if (arr.size() == 0 || arr.size() < 2) return false;
       for (int i=0; i<arr.size(); i++) {
-        if (m.count(2*arr[i]) || (arr[i]%2 && m.count(arr[i]/2)) ){
+        if (m.count(2*arr[i]) || (arr[i]%2==0 && m.count(arr[i]/2)) ){
           return true;
         }
         else{
-          m.insert({2*arr[i], arr[i]});
+          m.insert({arr[i], i});
         }
       }
       return false;
@@ -45,8 +45,9 @@ public:
 
 int main() {
   Solution sol;
-  //sample input: [10,2,5,3], exp output: true
-  vector<int> arr{-2,0,10,-19,4,6,-8};
+  // sample input: [10,2,5,3], exp output: true
+  // vector<int> arr{10,2,5,3};
+  vector<int> arr{7,1,14,11};
   // vector<int> arr{0, 0};
 
   bool is_present = sol.checkIfExistWithHasMap(arr);
