@@ -117,6 +117,10 @@ class MyLinkedList {
       }
     }
 
+    int getLength() {
+      return length;
+    }
+
   private:
     Node* head;
     int length;

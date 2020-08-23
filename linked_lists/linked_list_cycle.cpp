@@ -9,8 +9,8 @@
 using namespace std;
 class Solution {
 public:
-    bool hasCycle(ListNode *head) {
-      unordered_set<ListNode *> h_map;
+    bool hasCycle(ListNode* head) {
+      unordered_set<ListNode*> h_map;
       ListNode* runner = head;
       while (runner != nullptr) {
         if (h_map.find(runner) != h_map.end()) {
