@@ -15,7 +15,7 @@ public:
         
         if (p_count == s_count) res.push_back(0);
         
-        for (int i=m; i <n; i++) {
+        for (int i=m; i<n; i++) {
             s_count[s[i]-'a']++;
             s_count[s[i-m]-'a']--;
             if (p_count == s_count){
