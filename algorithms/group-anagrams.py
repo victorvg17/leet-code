@@ -1,8 +1,5 @@
 from collections import defaultdict
 class Solution:
-    def isAnagram(self, s1, s2) -> bool:
-        return sorted(s1) == sorted(s2)
-    
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         output = []
         d = defaultdict(list)
