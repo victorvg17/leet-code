@@ -14,3 +14,12 @@ class Solution:
                 runner = it
         out.append(runner)
         return out
+    
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        if len(intervals) == 0:
+            return [newInterval]
+        if len(newInterval) != 0:
+            intervals.append(newInterval)
+        intervals = sorted(intervals, key=lambda it: it[0])
+        out = self.merge(intervals)
+        return out
