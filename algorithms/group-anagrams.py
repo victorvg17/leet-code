@@ -1,5 +1,4 @@
 from collections import defaultdict
-import numpy as np
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         output = []
