@@ -23,8 +23,8 @@ class Solution:
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         T_ik0 = 0
-        T_ik1 = -prices[0]
+        T_ik1 = float('-inf')
         for p in prices:
             T_ik0 = max(T_ik0, T_ik1 + p)
-            T_ik1 = max(T_ik1, T_ik0 -p)
+            T_ik1 = max(T_ik1, T_ik0 - p)
         return T_ik0
